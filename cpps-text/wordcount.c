@@ -6,7 +6,7 @@ int main()
 {
     int cnt=0;
     char i;
-    while(i=getchar() && i!=EOF)//从输入流读取字符并且
+    while((i=getchar()) && (i!=EOF))//从输入流读取字符并且
     {
         //if(!isalpha(i)) cnt++;
         if (isalpha(i))
