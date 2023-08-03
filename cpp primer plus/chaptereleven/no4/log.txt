@@ -1,0 +1,42 @@
+main.cpp: In function ‘int main()’:
+main.cpp:8:13: error: expected ‘;’ before ‘a’
+    8 |         time a(3,35);
+      |             ^~
+      |             ;
+main.cpp:9:13: error: expected ‘;’ before ‘b’
+    9 |         time b(2,48);
+      |             ^~
+      |             ;
+main.cpp:10:13: error: expected ‘;’ before ‘t’
+   10 |         time t;
+      |             ^~
+      |             ;
+main.cpp:11:21: error: ‘a’ was not declared in this scope
+   11 |         cout<<"a="<<a<<"\tb="<<b<<endl;
+      |                     ^
+main.cpp:11:32: error: ‘b’ was not declared in this scope
+   11 |         cout<<"a="<<a<<"\tb="<<b<<endl;
+      |                                ^
+main.cpp:12:9: error: ‘t’ was not declared in this scope; did you mean ‘tm’?
+   12 |         t=a+b;
+      |         ^
+      |         tm
+socure.cpp:7:1: error: ‘time’ does not name a type
+    7 | time& operator+(time& a,const time& b)
+      | ^~~~
+socure.cpp:15:1: error: ‘time’ does not name a type
+   15 | time& operator-(time&a,const time&b)
+      | ^~~~
+socure.cpp:23:1: error: ‘time’ does not name a type
+   23 | time& operator*(time& a,const double d)
+      | ^~~~
+socure.cpp:36:40: error: ‘time’ does not name a type
+   36 | ostream& operator<<(ostream & os,const time& a)
+      |                                        ^~~~
+socure.cpp: In function ‘std::ostream& operator<<(std::ostream&, const int&)’:
+socure.cpp:38:28: error: request for member ‘hour’ in ‘a’, which is of non-class type ‘const int’
+   38 |         os<<"hours is "<<a.hour<<",minutes is "<<a.minutes<<"."<<endl;
+      |                            ^~~~
+socure.cpp:38:52: error: request for member ‘minutes’ in ‘a’, which is of non-class type ‘const int’
+   38 |         os<<"hours is "<<a.hour<<",minutes is "<<a.minutes<<"."<<endl;
+      |                                                    ^~~~~~~
